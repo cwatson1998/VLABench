@@ -3,6 +3,7 @@ import os
 import numpy as np
 import random
 import mediapy
+import cv2
 from tqdm import tqdm
 from VLABench.envs import load_env
 from VLABench.utils.utils import euler_to_quaternion
@@ -147,6 +148,7 @@ class Evaluator:
         info["consumed_step"] = i
         info["intention_score"] = env.get_intention_score(threshold=self.intention_score_threshold)
         info["progress_score"] = env.get_task_progress()
+        info["instruction"] = env.task.get_instruction()
         
         env.close()
         if self.save_dir is not None and self.visulization:
@@ -178,9 +180,11 @@ class Evaluator:
                 raise NotImplementedError(f"Metric {key} is not implemented")
         return metric
     
-    def save_video(self, frames, save_dir):
+    def save_video(self, frames, save_dir, superimposed_text=None):
         frames_to_save = [] 
         for frame in frames:
-            frames_to_save.append(np.vstack([np.hstack(frame[:2]), np.hstack(frame[2:4])]))
-        mediapy.write_video(save_dir, 
-                            frames_to_save, fps=10) 
+            frame_combined = np.vstack([np.hstack(frame[:2]), np.hstack(frame[2:4])])
+            if superimposed_text:
+                cv2.putText(frame_combined, superimposed_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+            frames_to_save.append(frame_combined)
+        mediapy.write_video(save_dir, frames_to_save, fps=10) 
