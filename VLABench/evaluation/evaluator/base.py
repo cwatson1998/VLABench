@@ -186,6 +186,7 @@ class Evaluator:
             frame_combined = np.vstack([np.hstack(frame[:2]), np.hstack(frame[2:4])])
             if not isinstance(superimposed_text, list):
                 superimposed_text = [superimposed_text]
+            superimposed_text = [str(text) for text in superimposed_text]
             for i, text in enumerate(superimposed_text):
                 # Position text vertically with 40px spacing
                 x, y = 10, 30 + (i * 40)
