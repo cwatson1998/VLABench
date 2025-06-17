@@ -153,7 +153,7 @@ class Evaluator:
         env.close()
         if self.save_dir is not None and self.visulization:
             os.makedirs(os.path.join(self.save_dir, agent.name, task_name), exist_ok=True)
-            self.save_video(frames_to_save, os.path.join(self.save_dir, agent.name, task_name, f"{episode_id}.mp4"), superimposed_text=info["instruction"])
+            self.save_video(frames_to_save, os.path.join(self.save_dir, agent.name, task_name, f"{episode_id}.mp4"), superimposed_text=[info["instruction"], info["success"], info["progress_score"]])
         return info
         
     def compute_metric(self, infos):
@@ -184,7 +184,15 @@ class Evaluator:
         frames_to_save = [] 
         for frame in frames:
             frame_combined = np.vstack([np.hstack(frame[:2]), np.hstack(frame[2:4])])
-            if superimposed_text:
-                cv2.putText(frame_combined, superimposed_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+            if not isinstance(superimposed_text, list):
+                superimposed_text = [superimposed_text]
+            for i, text in enumerate(superimposed_text):
+                # Position text vertically with 40px spacing
+                x, y = 10, 30 + (i * 40)
+                # Add black outline for better visibility
+                cv2.putText(frame_combined, text, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 
+                          0.8, (0, 0, 0), 3)  # thicker black outline
+                cv2.putText(frame_combined, text, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 
+                          0.8, (255, 255, 255), 1)  # white text
             frames_to_save.append(frame_combined)
         mediapy.write_video(save_dir, frames_to_save, fps=10) 
