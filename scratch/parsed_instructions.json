@@ -1,0 +1,132 @@
+{
+  "track_1_in_distribution": {
+    "select_fruit": [
+      "Put the banana into the plate_seen",
+      "Put the banana into the plate_seen",
+      "Put the banana into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the orange into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the orange into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the banana into the plate_seen"
+    ],
+    "select_toy": [
+      "Put the mickey into the giftbox_seen",
+      "Put the jessie into the giftbox_seen",
+      "Put the ironman into the giftbox_seen",
+      "Put the flashman into the giftbox_seen",
+      "Put the buzz_lightyear into the giftbox_seen",
+      "Put the mickey into the giftbox_seen",
+      "Put the jessie into the giftbox_seen",
+      "Put the donald into the giftbox_seen",
+      "Put the sanji into the giftbox_seen",
+      "Put the ironman into the giftbox_seen"
+    ]
+  },
+  "track_2_cross_category": {
+    "select_fruit": [
+      "Put the mango into the plate_unseen",
+      "Put the kiwi into the plate_unseen",
+      "Put the lemon into the plate_unseen",
+      "Put the lemon into the plate_unseen",
+      "Put the lemon into the plate_unseen",
+      "Put the peach into the plate_unseen",
+      "Put the kiwi into the plate_unseen",
+      "Put the kiwi into the plate_unseen",
+      "Put the lemon into the plate_unseen",
+      "Put the peach into the plate_unseen"
+    ],
+    "select_toy": [
+      "Put the woody into the giftbox_unseen",
+      "Put the reiju into the giftbox_unseen",
+      "Put the daisy into the giftbox_unseen",
+      "Put the joker into the giftbox_unseen",
+      "Put the joker into the giftbox_unseen",
+      "Put the minnie into the giftbox_unseen",
+      "Put the robin into the giftbox_unseen",
+      "Put the thor into the giftbox_unseen",
+      "Put the zoro into the giftbox_unseen",
+      "Put the chopper into the giftbox_unseen"
+    ]
+  },
+  "track_3_common_sense": {
+    "select_fruit": [
+      "I want a fruit that can be easily peeled by hand.",
+      "I need a fruit that is often eaten as a snack during sports for instant energy.",
+      "I want a fruit that is known for its high potassium content.",
+      "Please fetch a fruit that is commonly used in desserts for its mild and sweet flavor.",
+      "I want a fruit that is round and has a vibrant orange color.",
+      "I want a fruit that is known for its smooth and juicy texture.",
+      "I need the fruit that has a distinct bell shape.",
+      "I need a citrus fruit to make fresh juice.",
+      "I want a fruit that can be green, red, or yellow when ripe.",
+      "I want a fruit that is the easiest to peel without any tools."
+    ],
+    "select_toy": [
+      "Choose a character from the Disney's Mickey Mouse series. Please put it into the box.",
+      "Find the figure associated with Woody's roundup. Please put it into the box.",
+      "Pick a toy that is a wealthy entrepreneur by day and superhero by night. Please put it into the box.",
+      "Identify a toy associated with the Justice League. Please put it into the box.",
+      "Choose a toy from the Toy Story series. Please put it into the box.",
+      "Locate the character that is the main symbol of Disney. Please put it into the box.",
+      "Grasp a toy associated with a famous animated movie about toys coming to life. Please put it into the box.",
+      "Look for the character famous for its quick temper within the Disney lineup. Please put it into the box.",
+      "Pick a toy character known for cooking from the One Piece series. Please put it into the box.",
+      "Choose a toy that is part of the Marvel series. Please put it into the box."
+    ]
+  },
+  "track_4_semantic_instruction": {
+    "select_fruit": [
+      "I could use a boost of natural energy for my workout. Any suggestions?",
+      "For tomorrow's smoothie, I'd prefer something that can add a creamy texture naturally.",
+      "I heard potassium is good for muscle recovery. Any suggestions?",
+      "I could use a sweet addition to my afternoon snack that\u2019s also good for my heart.",
+      "I'd love a zesty topping for my dessert tonight.",
+      "I could use something naturally sweet and juicy for my afternoon snack.",
+      "I'm looking for a fruit that's rich in fiber but not too heavy for a light snack.",
+      "It\u2019s time for a vibrant splash of color in my afternoon smoothie.",
+      "I've been wanting to add a sweet but nutritious snack to my afternoon routine. Any suggestions?",
+      "I noticed my potassium levels might be a bit low, I should find something to balance that out."
+    ],
+    "select_toy": [
+      "Can you help set up a playdate with a character known for his adventures and friendly nature?",
+      "My niece loves strong female characters, could you pick one from Toy Story for her birthday?",
+      "I'm redecorating my game room in a superhero theme, and I want to display some tech-savvy characters. Can you assist?",
+      "I'm redecorating my themed DC superhero shelf and need help placing the figures starting with the speedster.",
+      "I need help picking a toy that would make a child dream of reaching for the stars and having intergalactic missions.",
+      "There's a cartoon trivia night this weekend; we need an emblematic figure to represent our team's mascot.",
+      "It\u2019s time for our weekly animation character lineup; make sure to include someone from a popular space adventure series.",
+      "We're playing a board game tonight that requires players to bring a figurine. Could you find the one that's known for having a bit of a temper?",
+      "I\u2019m hosting a sea-themed game night and I want to bring a maritime vibe to the event, can you grab an appropriate character for me?",
+      "My nephew loves superheroes and his birthday is coming up. I need help grabbing the perfect present from the shelf."
+    ]
+  },
+  "track_6_unseen_texture": {
+    "select_fruit": [
+      "Put the banana into the plate_seen",
+      "Put the banana into the plate_seen",
+      "Put the banana into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the orange into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the orange into the plate_seen",
+      "Put the pear into the plate_seen",
+      "Put the banana into the plate_seen"
+    ],
+    "select_toy": [
+      "Put the mickey into the giftbox_seen",
+      "Put the jessie into the giftbox_seen",
+      "Put the ironman into the giftbox_seen",
+      "Put the flashman into the giftbox_seen",
+      "Put the buzz_lightyear into the giftbox_seen",
+      "Put the mickey into the giftbox_seen",
+      "Put the jessie into the giftbox_seen",
+      "Put the donald into the giftbox_seen",
+      "Put the sanji into the giftbox_seen",
+      "Put the ironman into the giftbox_seen"
+    ]
+  }
+}

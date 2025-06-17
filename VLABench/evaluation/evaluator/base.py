@@ -153,7 +153,7 @@ class Evaluator:
         env.close()
         if self.save_dir is not None and self.visulization:
             os.makedirs(os.path.join(self.save_dir, agent.name, task_name), exist_ok=True)
-            self.save_video(frames_to_save, os.path.join(self.save_dir, agent.name, task_name, f"{episode_id}.mp4"))
+            self.save_video(frames_to_save, os.path.join(self.save_dir, agent.name, task_name, f"{episode_id}.mp4"), superimposed_text=info["instruction"])
         return info
         
     def compute_metric(self, infos):
