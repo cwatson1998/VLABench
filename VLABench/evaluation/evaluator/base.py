@@ -153,7 +153,15 @@ class Evaluator:
         env.close()
         if self.save_dir is not None and self.visulization:
             os.makedirs(os.path.join(self.save_dir, agent.name, task_name), exist_ok=True)
-            self.save_video(frames_to_save, os.path.join(self.save_dir, agent.name, task_name, f"{episode_id}.mp4"), superimposed_text=[info["instruction"], info["success"], info["progress_score"]])
+            # Create nicely labeled text for all info fields
+            labeled_text = [
+                f"Task: {info['instruction']}",
+                f"Success: {info['success']}",
+                f"Steps: {info['consumed_step']}",
+                f"Intention Score: {info['intention_score']:.3f}",
+                f"Progress Score: {info['progress_score']:.3f}"
+            ]
+            self.save_video(frames_to_save, os.path.join(self.save_dir, agent.name, task_name, f"{episode_id}.mp4"), superimposed_text=labeled_text)
         return info
         
     def compute_metric(self, infos):
