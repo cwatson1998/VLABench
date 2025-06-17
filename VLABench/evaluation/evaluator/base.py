@@ -114,6 +114,8 @@ class Evaluator:
         success = False
         info = {}
         frames_to_save = []
+        # Chris added the print
+        print(env.task.get_instruction())
         for i in range(max_episode_length):
             observation = env.get_observation()
             observation["instruction"] = env.task.get_instruction()
